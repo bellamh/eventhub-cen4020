@@ -1,0 +1,6 @@
+# Structurizr generated files
+.structurizr/
+workspace.json
+
+# macOS files
+.DS_Store

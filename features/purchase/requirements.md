@@ -1,0 +1,16 @@
+- **purchase-001** (event-driven): When an authenticated buyer selects an event and a valid ticket quantity, the {EventHub} shall allow the buyer to proceed through the standard checkout process.
+- **purchase-002** (event-driven): When an authenticated buyer selects the Quick Buy option, the {EventHub} shall initiate the simplified one-click ticket purchase process.
+- **purchase-003** (ubiquitous): The {EventHub} shall limit each buyer account to a maximum of eight tickets per event across all purchases.
+- **purchase-004** (unwanted): If a buyer requests an invalid ticket quantity, then the {EventHub} shall reject the request and display an error message.
+- **purchase-005** (unwanted): If a buyer selects an unsupported currency during checkout, then the {EventHub} shall reject the selection and display an error message.
+- **purchase-006** (ubiquitous): The {EventHub} shall not reserve or hold tickets while a buyer is browsing or completing checkout.
+- **purchase-007** (event-driven): When a buyer submits a purchase request, the {EventHub} shall recheck current ticket availability before confirming the purchase.
+- **purchase-008** (event-driven): When a purchase request satisfies the inventory and ticket-limit constraints, the {EventHub} shall atomically validate and decrement the available ticket inventory as part of purchase processing.
+- **purchase-009** (unwanted): If the requested ticket quantity exceeds the available inventory, then the {EventHub} shall reject the purchase and display an insufficient-availability message.
+- **purchase-010** (unwanted): If a purchase would cause a buyer to exceed eight tickets for the same event, then the {EventHub} shall reject the purchase and display a ticket-limit message.
+- **purchase-011** (event-driven): When a ticket purchase is completed successfully, the {EventHub} shall display an on-screen confirmation containing the purchased event, ticket quantity, and final price.
+- **purchase-012** (event-driven): When a ticket purchase fails, the {EventHub} shall display a failure message without confirming the purchase.
+- **purchase-013** (event-driven): When an authenticated buyer requests order history, the {EventHub} shall display the buyer's previous completed purchases.
+- **purchase-014** (unwanted): If a buyer abandons checkout by navigating backward or closing the browser tab, then the {EventHub} shall allow checkout to end without creating a completed purchase or decrementing inventory.
+- **purchase-015** (ubiquitous): The {EventHub} shall process purchase requests without allowing concurrent transactions to oversell available ticket inventory.
+- **purchase-016** (event-driven): When a buyer submits a purchase request, the {EventHub} shall coordinate authentication, event validation, pricing, inventory processing, and audit logging before reporting the purchase outcome.

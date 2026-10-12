@@ -1,0 +1,3 @@
+- **audit-001** (event-driven): When a buyer attempts to purchase tickets, the {EventHub} shall record an audit entry containing the timestamp, buyer identifier, event identifier, requested quantity, selected currency, and purchase outcome.
+- **audit-002** (event-driven): When a purchase attempt succeeds or fails, the {EventHub} shall record the corresponding outcome in the audit log.
+- **audit-003** (ubiquitous): The {EventHub} shall include audit logging in the purchase-processing workflow so that purchase attempts are traceable.

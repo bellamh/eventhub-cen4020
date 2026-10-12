@@ -1,0 +1,8 @@
+- **catalog-001** (ubiquitous): The {EventHub} shall display a list of upcoming events available for ticket purchase.
+- **catalog-002** (event-driven): When a buyer searches for an artist, the {EventHub} shall display events matching the submitted artist name.
+- **catalog-003** (event-driven): When a buyer searches for a venue, the {EventHub} shall display events matching the submitted venue name.
+- **catalog-004** (unwanted): If a search returns no matching events, then the {EventHub} shall display a no-match message and the full event list.
+- **catalog-005** (ubiquitous): The {EventHub} shall safely escape user-provided search input before displaying it in the interface.
+- **catalog-006** (event-driven): When a buyer selects an event, the {EventHub} shall display the event's details, including its artist, venue, date, ticket price, and availability.
+- **catalog-007** (event-driven): When a buyer opens an event details page, the {EventHub} shall retrieve and display the event's current ticket availability.
+- **catalog-008** (state-driven): While an event is hosted at USF, the {EventHub} shall identify the event as USF-hosted in the event listing and details page.

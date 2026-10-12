@@ -1,0 +1,8 @@
+- **identity-001** (event-driven): When a buyer submits a registration form containing a name, email address, and password, the {EventHub} shall create a buyer account after validating the submitted information.
+- **identity-002** (event-driven): When a buyer registers with an email address ending in `@usf.edu`, the {EventHub} shall classify the account as eligible for the USF student discount without requiring email verification.
+- **identity-003** (ubiquitous): The {EventHub} shall store account passwords as secure password hashes rather than plaintext.
+- **identity-004** (event-driven): When a registered buyer submits valid login credentials, the {EventHub} shall authenticate the buyer and establish a session.
+- **identity-005** (unwanted): If a buyer submits invalid login credentials, then the {EventHub} shall deny authentication and display an error message.
+- **identity-006** (event-driven): When an unauthenticated buyer requests checkout or order history, the {EventHub} shall redirect the buyer to login and return the buyer to the originally requested page after successful authentication.
+- **identity-007** (unwanted): If an unauthenticated user requests a protected checkout or order-history URL directly, then the {EventHub} shall deny access to protected content and shall not create a checkout or order record before authentication.
+- **identity-008** (state-driven): While a buyer session is authenticated, the {EventHub} shall restrict access to that buyer's order history to the authenticated account.

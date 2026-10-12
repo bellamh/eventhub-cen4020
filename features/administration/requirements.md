@@ -1,0 +1,6 @@
+- **administration-001** (event-driven): When an authenticated administrator accesses the administration interface, the {EventHub} shall display the exchange-rate management and audit-log viewing options.
+- **administration-002** (event-driven): When an authenticated administrator submits a valid exchange-rate update, the {EventHub} shall save the updated exchange rate for subsequent price calculations.
+- **administration-003** (unwanted): If an administrator submits an invalid exchange-rate value, then the {EventHub} shall reject the update and display a validation error.
+- **administration-004** (event-driven): When an authenticated administrator requests the audit log, the {EventHub} shall display recorded purchase attempts and their outcomes.
+- **administration-005** (unwanted): If a user without administrator privileges attempts to access an administrative page or operation, then the {EventHub} shall deny access.
+- **administration-006** (ubiquitous): The {EventHub} shall restrict exchange-rate modification and audit-log viewing operations to authenticated administrators.

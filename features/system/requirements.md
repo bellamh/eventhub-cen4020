@@ -1,0 +1,5 @@
+- **system-001** (ubiquitous): The {EventHub} shall validate all user-provided input at the application boundary before processing it.
+- **system-002** (ubiquitous): The {EventHub} shall provide a responsive web interface that supports desktop and mobile browsers.
+- **system-003** (ubiquitous): The {EventHub} shall allow buyers to register, browse events, and purchase tickets regardless of their geographic location.
+- **system-004** (ubiquitous): The {EventHub} shall implement the ticketing platform as a Python Flask web application without requiring external payment processing or email delivery services.
+- **system-005** (ubiquitous): The {EventHub} shall use a shared persistent data store for buyer accounts, events, ticket inventory, purchases, exchange rates, and audit records.

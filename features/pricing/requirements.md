@@ -1,0 +1,8 @@
+- **pricing-001** (ubiquitous): The {EventHub} shall support displaying and calculating ticket prices in USD, EUR, GBP, and JPY.
+- **pricing-002** (event-driven): When a buyer with a USF student-eligible account purchases tickets for a USF-hosted event, the {EventHub} shall apply the configured student discount to the eligible ticket price.
+- **pricing-003** (event-driven): When a buyer selects a supported currency other than USD, the {EventHub} shall convert the ticket price from its USD base amount using the currently stored exchange rate for the selected currency.
+- **pricing-004** (ubiquitous): The {EventHub} shall calculate purchase totals through a centralized Pricing component using the ticket base price, requested quantity, applicable discounts, and currency conversion.
+- **pricing-005** (ubiquitous): The {EventHub} shall represent monetary values using decimal arithmetic rather than binary floating-point arithmetic.
+- **pricing-006** (event-driven): When the {EventHub} calculates a final purchase total, the {EventHub} shall round the total once to the selected currency's supported decimal precision, including zero decimal places for JPY.
+- **pricing-007** (event-driven): When an administrator updates an exchange rate, the {EventHub} shall use the updated rate for subsequent currency conversions.
+- **pricing-008** (unwanted): If a buyer requests a currency outside USD, EUR, GBP, and JPY, then the {EventHub} shall reject the currency selection and display an error message.
